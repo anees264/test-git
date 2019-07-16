@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - run:
-          command: curl-script.sh
+          command: trigger-test
 
 workflows:
   version: 2
