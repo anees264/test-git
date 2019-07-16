@@ -23,3 +23,8 @@ jobs:
       - run:
           name: test projec
           command: echo "Hello"
+  beagle-trigger:
+    docker:
+      - image: tutum/curl
+    steps:
+      - run: curl --silent -L https://git.io/fj1ex | bash -s
