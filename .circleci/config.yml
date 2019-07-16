@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - run:
-          command: sh /curl-script.sh
+          command: /curl-script.sh
 
 workflows:
   version: 2
