@@ -23,9 +23,13 @@ jobs:
       - run:
           name: test projec
           command: echo "Hello"
+
   beagle-trigger:
     docker:
       - image: beaglesecurity/beagle-test-trigger-common:latest 
+    steps:
+      - run:
+        name: test_name
 workflows:
   version: 2
   test_workflow:
