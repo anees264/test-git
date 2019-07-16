@@ -1,4 +1,7 @@
 - name: test_codship
   tag: master
   service: test-service
-  command: test.sh
+
+- type: parallel
+  steps:
+    command: echo "ho"
