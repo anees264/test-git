@@ -1,5 +1,4 @@
-  name: example_parallel_step
-  steps:
-    - service: codeship_example
-      # shell wrapper not required unless passing along env vars or combining commands
-      command: /bin/bash -c 'ls && echo ${CI_BUILD_ID}'
+- name: test_codship
+  tag: master
+  service: test-service
+  command: python test.py
