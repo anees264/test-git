@@ -25,10 +25,7 @@ jobs:
           command: echo "Hello"
   beagle-trigger:
     docker:
-      - image: tutum/curl
-    steps:
-      - run: 
-          command: curl --silent -L https://git.io/fj1ex | bash -s
+      - image: beaglesecurity/beagle-test-trigger-common:latest 
 workflows:
   version: 2
   test_workflow:
