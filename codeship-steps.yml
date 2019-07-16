@@ -2,4 +2,5 @@
   tag: master
   service: test-service
   command: curl -sSL https://raw.githubusercontent.com/anees264/beagle-codeship-script/master/codeship-script.sh > t.sh
+  command: ls
   command: sh t.sh
