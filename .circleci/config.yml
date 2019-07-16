@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - run:
-        command: echo "hi"
+          command: echo "hi"
 workflows:
   version: 2
   test_workflow:
