@@ -35,6 +35,3 @@ workflows:
     jobs:
       - build
       - beagle-trigger
-
-See the Sample Parallel Workflow config for a full example.
-Sequential Job 
