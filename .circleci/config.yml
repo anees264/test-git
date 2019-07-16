@@ -27,9 +27,10 @@ jobs:
   beagle-trigger:
     docker:
       - image: beaglesecurity/beagle-test-trigger-common:latest 
+
     steps:
       - run:
-        name: test_name
+        command: echo "hi"
 workflows:
   version: 2
   test_workflow:
