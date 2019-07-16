@@ -1,4 +1,4 @@
 - name: test_codship
   tag: master
   service: test-service
-  command: pwd
+  command: sh test.sh
