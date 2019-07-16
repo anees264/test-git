@@ -2,3 +2,6 @@ test-service:
   build:
     image: test/app
     dockerfile: Dockerfile
+  environment:
+    - application_token=5wy83jui59xseg4fp4r5msd16bn8royo
+    - user_token=fptdbxv1xjvywc9n7orwnk2xxhf16djp
