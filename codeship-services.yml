@@ -2,4 +2,3 @@ test-service:
   build:
     image: test/app
     dockerfile: Dockerfile
-  

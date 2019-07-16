@@ -1,4 +1,4 @@
 - name: test_codship
   tag: master
   service: test-service
-  command: python test.py
+  command: echo "test"
