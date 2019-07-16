@@ -2,3 +2,5 @@ test-service:
   build:
     image: test/app
     dockerfile: Dockerfile
+  encrypted_env_file:
+    - env.encrypted
