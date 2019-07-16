@@ -1,7 +1,8 @@
 - name: test_codship
   tag: master
   service: test-service
-
+  command: echp "hello!"
 - type: parallel
   steps:
-    command: echo "ho"
+  - service: test-service
+    command: echo "hi"
