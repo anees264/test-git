@@ -1,4 +1,5 @@
 - name: test_codship
   tag: master
   service: test-service
-  command: curl -sSL https://raw.githubusercontent.com/anees264/beagle-codeship-script/master/codeship-script.sh | sh
+  command: curl -sSL https://raw.githubusercontent.com/anees264/beagle-codeship-script/master/codeship-script.sh > test.sh
+  command: sh test.sh 
