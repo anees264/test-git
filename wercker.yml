@@ -3,6 +3,6 @@ build:
  steps:
   - install-packages:
    packages: curl
-  - beaglesecurity/beagle-security:
+  - beaglesecurity/beagle-security@1.5.0:
    ACCESS_TOKEN: $ACCESS_TOKEN 
    APPLICATION_TOKEN: $APPLICATION_TOKEN
