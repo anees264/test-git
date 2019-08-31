@@ -1,0 +1,6 @@
+beagle-trigger:
+    docker:
+        - image: beaglesecurity/beagle-test-trigger-common:latest
+    steps:
+        - run:
+            command: trigger-test 
