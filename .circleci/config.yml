@@ -3,9 +3,10 @@ workflows:
     workflow-name:
         jobs:
             - beagle-trigger
-beagle-trigger:
-    docker:
-        - image: beaglesecurity/beagle-test-trigger-common:latest
-    steps:
-        - run:
-            command: trigger-test 
+jobs:
+    beagle-trigger:
+        docker:
+            - image: beaglesecurity/beagle-test-trigger-common:latest
+        steps:
+            - run:
+                command: trigger-test 
