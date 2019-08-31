@@ -1,12 +1,13 @@
-workflows:
-    version: 1.0.0
-    workflow-name:
-        jobs:
-            - beagle-trigger
 jobs:
     beagle-trigger:
         docker:
             - image: beaglesecurity/beagle-test-trigger-common:latest
         steps:
             - run:
-                command: trigger-test 
+                command: trigger-test
+workflows:
+    version: 2
+    workame:
+        jobs:
+            - beagle-trigger
+
