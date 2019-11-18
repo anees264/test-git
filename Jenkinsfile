@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    environment {
+	FASTLANE_PASSWORD = credentials('FASTLANE_PASSWORD')
+    }
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo '$FASTLANE_PASSWORD'
 		sh 'ls -al'
             }
         }
