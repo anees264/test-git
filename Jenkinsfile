@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Build') {
           steps {
-            echo '$FLAG'
-            echo '$CLAG'
+            echo $FLAG
+            echo $CLAG
           }
         }
         stage('Test') {
