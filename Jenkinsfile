@@ -9,6 +9,7 @@ pipeline {
           steps {
             sh '''
               echo $CLAG
+              echo $FLAG
             '''
           }
         }
