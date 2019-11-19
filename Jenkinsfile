@@ -2,15 +2,15 @@ pipeline {
     agent any
     environment {
       withCredentials([string(credentialsId: 'flpwd', variable: 'mypwd')]) {
-        FL = '$mypwd'
+        FLAG = '$mypwd'
       }
-      CL = 'hello'
+      CLAG = 'hello'
     }
     stages {
         stage('Build') {
           steps {
-            echo '$FL'
-            echo '$CL'
+            echo '$FLAG'
+            echo '$CLAG'
           }
         }
         stage('Test') {
