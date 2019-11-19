@@ -4,8 +4,10 @@ pipeline {
         stage('Build') {
           steps {
             withCredentials([string(credentialsId: 'flpwd', variable: 'mypwd')]) {
+              sh'''
               set +x
-              sh 'echo $mypwd'
+              echo $mypwd
+              '''
             }
           }
         }
