@@ -16,7 +16,7 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: Beagle Security Test
-      uses: beaglesecurity/beagle-github-action@1.0.0
+      uses: beaglesecurity/beagle-github-action@1.0.1
       env:
           access_token: ${{ secrets.beagle_access_token }}
           application_token: ${{ secrets.beagle_application_token }}
