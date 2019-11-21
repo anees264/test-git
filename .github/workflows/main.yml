@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+    - name: Beagle Security Test
+      uses: beaglesecurity/beagle-github-action@1.0.0
+      env:
+          access_token: ${{ secrets.beagle_access_token }}
+          application_token: ${{ secrets.beagle_application_token }}
+        
