@@ -1,26 +1,9 @@
 pipeline {
-    agent any
-    environment {
-      FLAG = credentials('flpwd')
-      CLAG = 'hello'
-    }
+    agent { dockerfile true }
     stages {
-        stage('Build') {
-          steps {
-            sh '''
-              echo $CLAG
-              echo $FLAG
-            '''
-          }
-        }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                sh 'echo hi'
             }
         }
     }
