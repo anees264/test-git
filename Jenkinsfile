@@ -1,26 +1,11 @@
 pipeline {
-    agent any
-    environment {
-      FLAG = credentials('flpwd')
-      CLAG = 'hello'
+    agent {
+        docker { image 'node:7-alpine' }
     }
     stages {
-        stage('Build') {
-          steps {
-            sh '''
-              echo $CLAG
-              echo $FLAG
-            '''
-          }
-        }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                sh 'node --version'
             }
         }
     }
