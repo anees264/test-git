@@ -1,11 +1,13 @@
 pipeline {
-    agent {
-        docker { image 'node:7-alpine' }
-    }
+    agent any
     stages {
-        stage('Test') {
+        stage('Build image') {
             steps {
-                sh 'node --version'
+                echo 'Starting to build docker image'
+
+                script {
+                    dedocker.build("dev")
+                }
             }
         }
     }
