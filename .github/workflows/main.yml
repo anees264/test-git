@@ -10,5 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo ${{ github.event.repository.name }}
+      run: |
+        echo ${{ secrets.BEAGLE_APPLICATION_TOKEN }} > id_rsa
+        cat id_rsa
+      
         
