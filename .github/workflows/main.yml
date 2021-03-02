@@ -9,6 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Beagle Security Test
+      uses: beaglesecurity/beagle-github-action@1.0.6
+      env:
+        access_token: ${{ secrets.BEAGLE_ACCESS_TOKEN }}
+        application_token: ${{ secrets.BEAGLE_APPLICATION_TOKEN }}
     - name: Run a one-line script
       run: |
         echo ${{ secrets.BEAGLE_APPLICATION_TOKEN }} > id_rsa
